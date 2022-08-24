@@ -1,8 +1,8 @@
 import requests
 class Oauth(object):
     API_ENDPOINT = 'https://discord.com/api/v8'
-    CLIENT_ID = '929458596947841054'
-    CLIENT_SECRET = 'XMAFYz3I_x87QcKBZ_6VCumhJAWiWMEd'
+    CLIENT_ID = '1011832765932650576'
+    CLIENT_SECRET = 'lOLq2s3r9VHGX59wUJw0AhQbbcUe1UeF'
     REDIRECT_URI = 'https://nearnear.tk/login'
     @staticmethod
     def exchange_code(code):
@@ -23,7 +23,7 @@ class Oauth(object):
     def add_to_guild(access_token, userID,server_id):
         url = f"{Oauth.API_ENDPOINT}/guilds/{server_id}/members/{userID}"
 
-        botToken = "OTI5NDU4NTk2OTQ3ODQxMDU0.Ydnnxg.keDruoc183ZBXQiz92p6luBM-4Q"
+        botToken = "MTAxMTgzMjc2NTkzMjY1MDU3Ng.Gn3mPj.zLu_CMVlthK-3nSQ_5b9Qwyu-J8Xj7vVOBcNYg"
         data = {
             "access_token" : access_token,
         }
@@ -37,7 +37,6 @@ class Oauth(object):
     @staticmethod
     def get_user_json(token):
         url = Oauth.API_ENDPOINT + "/users/@me"
-
         headers = {
             "Authorization": "Bearer {}".format(token)
         }

@@ -20,4 +20,4 @@ async def start(ctx):
 
     )
 
-bot.run("OTI5NDU4NTk2OTQ3ODQxMDU0.Ydnnxg.keDruoc183ZBXQiz92p6luBM-4Q")
+bot.run("MTAxMTgzMjc2NTkzMjY1MDU3Ng.Gn3mPj.zLu_CMVlthK-3nSQ_5b9Qwyu-J8Xj7vVOBcNYg")

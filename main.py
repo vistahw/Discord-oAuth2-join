@@ -5,22 +5,23 @@ import requests
 import pymongo
 import time
 import json
+import dns
 import discord
 import discord.ext
 from discord.utils import get
 from discord.ext import commands
-import dns
+import app as Di
 import asyncio
 app = Quart('')
-app.secret_key = 'BOT SECRET'
-cluster = pymongo.MongoClient("YOUR MONGO DB")
+app.secret_key = 'MTAxMTgzMjc2NTkzMjY1MDU3Ng.Gn3mPj.zLu_CMVlthK-3nSQ_5b9Qwyu-J8Xj7vVOBcNYg'
+cluster = pymongo.MongoClient("mongodb+srv://Taskapp:zaq12wsx@cluster0.eigqooi.mongodb.net/?retryWrites=true&w=majority")
 db = cluster["data"]
 collection = db["tokens"]
 @app.before_serving
 async def before_serving():
     loop = asyncio.get_event_loop()
     app.discord_client = Di.DiscordClient()
-    await app.discord_client.bot.login("BOT TOKEN")
+    await app.discord_client.bot.login("MTAxMTgzMjc2NTkzMjY1MDU3Ng.Gn3mPj.zLu_CMVlthK-3nSQ_5b9Qwyu-J8Xj7vVOBcNYg")
     loop.create_task(app.discord_client.bot.connect())
 
 @app.route("/")

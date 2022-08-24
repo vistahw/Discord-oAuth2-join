@@ -11,7 +11,7 @@ class DiscordClient:
         await self.bot.change_presence(status=discord.Status.online, activity=discord.Game(f"Dark Moded!"))
 
     async def add_role(self,user_id):
-        guild = self.bot.get_guild(686310388023033902)
-        role = guild.get_role(9316020307688161582)
+        guild = self.bot.get_guild(1011894736979775508)
+        role = guild.get_role(1011895024180547604)
         user = guild.get_member(int(user_id))
         await user.add_roles(role)
